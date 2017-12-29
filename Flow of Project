@@ -1,6 +1,74 @@
 Flow of Project
 ---------------->
 
-AdminLogin.main(new String[]{});
-LibrarianLogin.main(new String[]{});
+Library.main
+1. AdminLogin.main(new String[]{});
+	1.1 AdminSuccess.main(new String[]{});
+2. LibrarianLogin.main(new String[]{});
+	1.2 LibrarianSuccess.main(new String[]{});
 
+1.1 AdminSuccess
+	1.1.1 Add Librarian 
+		1.1.1.1 LibrarianForm.main
+			LibrarianDao.save
+			AdminSuccess.main
+	1.1.2 View Librarian
+		1.1.2.1 ViewLibrarian.main
+			
+	1.1.3 Delete Librarian
+		1.1.3.1 DeleteLibrarian.main
+			LibrarianDao.delete(id);
+			AdminSuccess.main(new String[]{});
+	1.1.4 Logout
+		1.1.4.1 Library.main(new String[]{});
+	
+2.1 LibrarianSuccess
+	2.1.1 Add Books
+		2.1.1.1 BooksForm.main(new String[]{});
+	2.1.2 View Books
+	2.1.3 Issue Book
+	2.1.4 View Issued Books
+	2.1.5 Return Book
+	2.1.6 Logout
+
+
+
+
+
+
+1. AdminLogin
+
+if(id matched password){
+	AdminSuccess.main(new String[]{});
+}
+
+
+AdminSuccess
+------------
+
+Add Librarian {
+	LibrarianForm.main(new String[]{});
+}
+
+View Librarian
+Delete Librarian
+Logout
+
+
+
+2. LibrarianLogin
+
+if(id matched password){
+	LibrarianSuccess.main(new String[]{});
+}
+
+
+LibrarianSuccess
+-----------------
+
+Add Books
+View Books
+Issue Book
+View Issued Books
+Return Book
+Logout
