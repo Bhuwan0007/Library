@@ -9,6 +9,6 @@ public class DB {
 			con=DriverManager.getConnection("jdbc:sqlserver://localhost:1433;user=sa;password=demo.demo;database=Lib");
 		}catch(Exception e){System.out.println(e);}
 		return con;
-	}
+	} 
 
 }
