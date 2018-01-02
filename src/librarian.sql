@@ -41,6 +41,18 @@ CREATE TABLE IF NOT EXISTS `librarian` (
 -- Dumping data for table `librarian`
 --
 
+CREATE TABLE librarian (
+  [id] int NOT NULL IDENTITY,
+  [name] varchar(50) NOT NULL,
+  [password] varchar(50) NOT NULL,
+  [email] varchar(50) NOT NULL,
+  [address] varchar(50) NOT NULL,
+  [city] varchar(50) NOT NULL,
+  [contact] varchar(50) NOT NULL,  
+  PRIMARY KEY ([id])
+);
+
+
 INSERT INTO `librarian` (`id`, `name`, `password`, `email`, `address`, `city`, `contact`) VALUES
 (1, 'Prabhakar', 'ppp', 'prabhakar@gmail.com', 'javatpoint', 'noida', '9998328238'),
 (4, 'sumedh', 'sumesh', 'sumesh@gmail.com', 'Kuch Bhi', 'noida', '93823932823'),
