@@ -66,7 +66,7 @@ public class AdminLogin extends JFrame {
 			String name=textField.getText();
 			String password=String.valueOf(passwordField.getPassword());
 			if(name.equals("admin")&&password.equals("admin123")){
-				AdminSuccess.main(new String[]{}); // ************************** //
+				AdminSuccess.main(new String[]{}); // ************************** // AdminLogin statement added
 				frame.dispose();
 			}else{
 				JOptionPane.showMessageDialog(AdminLogin.this, "Sorry, Username or Password Error","Login Error!", JOptionPane.ERROR_MESSAGE);
