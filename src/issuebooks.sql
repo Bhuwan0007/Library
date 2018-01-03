@@ -36,6 +36,19 @@ CREATE TABLE IF NOT EXISTS `issuebooks` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
+
+// convert from internet Oracle to SQL server
+
+CREATE TABLE `issuebooks` (
+  [id] int NOT NULL IDENTITY,
+  [bookcallno] varchar(50) NOT NULL,
+  [studentid] int NOT NULL,
+  [studentname] varchar(50) NOT NULL,
+  [studentcontact] varchar(20) NOT NULL,
+  [issueddate] datetime2(6) NOT NULL DEFAULT GETDATE(),
+  PRIMARY KEY ([id])
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
 --
 -- Dumping data for table `issuebooks`
 --
